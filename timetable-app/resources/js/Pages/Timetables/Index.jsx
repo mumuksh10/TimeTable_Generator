@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
+import { Link } from "@inertiajs/inertia-react"; // Import Link
 
 const Timetables = () => {
     const { classrooms, timetables } = usePage().props;
@@ -31,12 +32,18 @@ const Timetables = () => {
 
     return (
         <div className="container mt-5">
-            <h1
-                className="mb-4 text-center"
-                style={{ fontWeight: "bold", color: "#007bff" }}
-            >
-                Timetables
-            </h1>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+                <Link href="/dashboard" className="btn btn-secondary">
+                    Back to Teachers
+                </Link>
+                <h1
+                    className="text-center"
+                    style={{ fontWeight: "bold", color: "#007bff" }}
+                >
+                    Timetables
+                </h1>
+                <div></div> {/* Placeholder for the right-side alignment */}
+            </div>
             <div className="form-group">
                 <label htmlFor="classroom" style={{ fontWeight: "bold" }}>
                     Select Classroom

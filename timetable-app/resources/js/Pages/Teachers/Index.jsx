@@ -8,6 +8,11 @@ const Teachers = () => {
 
     return (
         <div className="container mt-5">
+            <div className="d-flex justify-content-between align-items-center mb-4">
+                <Link href="/" className="btn btn-secondary">
+                    Back to Dashboard
+                </Link>
+            </div>
             <h1
                 className="mb-4 text-center"
                 style={{ fontWeight: "bold", color: "#007bff" }}

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Inertia } from "@inertiajs/inertia";
+import { Link } from "@inertiajs/inertia-react"; // Import Link
 
 const CreateTeacher = () => {
     const [name, setName] = useState("");
@@ -19,12 +20,17 @@ const CreateTeacher = () => {
 
     return (
         <div className="container mt-5">
-            <h1
-                className="mb-4 text-center"
-                style={{ fontWeight: "bold", color: "#28a745" }}
-            >
-                Add New Teacher
-            </h1>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+                <h1
+                    className="mb-4 text-center"
+                    style={{ fontWeight: "bold", color: "#28a745" }}
+                >
+                    Add New Teacher
+                </h1>
+                <Link href="/teachers" className="btn btn-secondary">
+                    Back
+                </Link>
+            </div>
             <div className="card">
                 <div className="card-header bg-success text-white">
                     <h5 className="mb-0">Teacher Details</h5>

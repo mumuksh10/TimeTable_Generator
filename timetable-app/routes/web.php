@@ -8,6 +8,7 @@ use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TimetableController;
 
+Route::redirect('/', '/dashboard');
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
